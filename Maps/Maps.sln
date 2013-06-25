@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maps", "Maps\Maps.csproj", "{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Debug|iPhone.Build.0 = Debug|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Release|iPhone.ActiveCfg = Release|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Release|iPhone.Build.0 = Release|iPhone
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{45C5DF39-B9B6-45C0-9CFE-9CA01EC6F689}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Maps\Maps.csproj
+	EndGlobalSection
+EndGlobal
