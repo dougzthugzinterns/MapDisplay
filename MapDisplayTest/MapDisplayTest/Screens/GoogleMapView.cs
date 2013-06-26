@@ -10,8 +10,19 @@ namespace MapDisplayTest
 {
 	public partial class GoogleMapView : UIViewController
 	{
+		private CLLocationCoordinate2D[] markersToAdd;
+
 		public GoogleMapView () : base ("GoogleMapView", null)
 		{
+			markersToAdd =  new CLLocationCoordinate2D[]{new CLLocationCoordinate2D(37.797865, -122.402526), 
+				new CLLocationCoordinate2D(37.897865, -122.502526),
+				new CLLocationCoordinate2D(37.997865, -122.602526),
+				new CLLocationCoordinate2D(37.697865, -122.302526)};
+		}
+
+		public GoogleMapView (CLLocationCoordinate2D[] markerLocationsToAdd) : base ("GoogleMapView", null)
+		{
+			markersToAdd = markerLocationsToAdd;
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -26,17 +37,19 @@ namespace MapDisplayTest
 
 
 
-		public void addMarkerAtLocationWithGoogleMarker(CLLocationCoordinate2D position, string title, string snippet, UIColor color){
-			var newMarker = new Marker(){
-				Title = title,
-				Snippet = snippet,
-				Position = position,
-				Icon = Google.Maps.Marker.MarkerImage(color),
-				Map = mapView
-			};
-		}
+		public void addMarkerAtLocationsWithGoogleMarker(CLLocationCoordinate2D[] position){
 
-		public void addMarkerAtLocationWithCustomMarker(CLLocationCoordinate2D position, string title, string snippet, UIImage markerIcon){
+			foreach(CLLocationCoordinate2D newPos in position){
+				var newMarker = new Marker(){
+					Title = "Incident Occured",
+					Position = newPos,
+					Icon = Google.Maps.Marker.MarkerImage(UIColor.Red),
+					Map = mapView
+				};
+			}
+		}
+		/*
+		public void addMarkerAtLocationsWithCustomMarker(CLLocationCoordinate2D position, string title, string snippet, UIImage markerIcon){
 			var newMarker = new Marker(){
 				Title = title,
 				Snippet = snippet,
@@ -49,6 +62,7 @@ namespace MapDisplayTest
 
 
 		}
+		*/
 
 		public int getZoomLevel(double minLat, double maxLat, double minLong, double maxLong, float mapWidth, float mapHeight){
 			float mapdisplay = Math.Min (mapHeight, mapWidth);
@@ -63,50 +77,34 @@ namespace MapDisplayTest
 			return (int) zoom;
 		}
 
+		public void cameraAutoZoomAndReposition(CLLocationCoordinate2D[] markerPositions){
+			double minLong = 180.0f;
+			double maxLong = -180.0f;
+			double minLat = 90.0f;
+			double maxLat = -90.0f;
+			foreach (CLLocationCoordinate2D currentMarkerPosition in markerPositions) {
+				maxLong = Math.Max (maxLong, currentMarkerPosition.Longitude);
+				minLong = Math.Min (minLong, currentMarkerPosition.Longitude);
+				maxLat = Math.Max (maxLat, currentMarkerPosition.Latitude);
+				minLat = Math.Min (minLat, currentMarkerPosition.Latitude);
+			}
+			CLLocationCoordinate2D coord1 = new CLLocationCoordinate2D (maxLat, minLong);
+			CLLocationCoordinate2D coord2 = new CLLocationCoordinate2D (minLat, maxLong);
+			mapView.MoveCamera(CameraUpdate.FitBounds(new CoordinateBounds(coord1, coord2)));		
+			mapView.MoveCamera (CameraUpdate.ZoomToZoom((float) (getZoomLevel (minLat,maxLat,minLong,maxLong,mapViewOutlet.Frame.Size.Width,mapViewOutlet.Frame.Size.Height))));
+
+		}
+
 		public override void LoadView ()
 		{
 			base.LoadView ();
 			CameraPosition camera = CameraPosition.FromCamera (37.797865, -122.402526,0);
 			mapView = Google.Maps.MapView.FromCamera (RectangleF.Empty, camera);
 			mapView.MyLocationEnabled = true;
-			float minLong = 180.0f;
-			float maxLong = -180.0f;
-			float minLat = 90.0f;
-			float maxLat = -90.0f;
-			for (int i = 0; i<10; i++) {
-				UIColor awesomeColor = new UIColor (new MonoTouch.CoreGraphics.CGColor(0,(float)i/(float)10,0,1));
-				float lat = (float)(37.797865 + i * 0.001);
-				float longt = (float)(-122.402526 + i * 0.001);
-				if (maxLong < longt) {
-					maxLong = longt;
-				}
-				if (minLong > longt) {
-					minLong = longt;
-				}
-				if (maxLat < lat) {
-					maxLat = lat;
-				}
-				if (minLat > lat) {
-					minLat = lat;
-				}
 
-			}
-
-			Console.WriteLine ("Map View Height: "+mapViewOutlet.Frame.Size.Height);
-			Console.WriteLine ("Map View Width: "+mapViewOutlet.Frame.Size.Width);
-
-			addMarkerAtLocationWithGoogleMarker (new CLLocationCoordinate2D (minLat, maxLong), "Lower Right hand Corner", "WOOOOOOOO", UIColor.Cyan);
-			addMarkerAtLocationWithGoogleMarker (new CLLocationCoordinate2D (maxLat, minLong), "Upper Left hand Corner", "WOOOOOOOO", UIColor.Cyan);
-
-			Console.WriteLine ("Max Lat and Long: "+maxLat+" "+maxLong);
-			Console.WriteLine ("Min Lat and Long: "+minLat+" "+minLong);
-			CLLocationCoordinate2D coord1 = new CLLocationCoordinate2D (maxLat, minLong);
-			CLLocationCoordinate2D coord2 = new CLLocationCoordinate2D (minLat, maxLong);
-			mapView.MoveCamera(CameraUpdate.FitBounds(new CoordinateBounds(coord1, coord2)));		
-			Console.WriteLine ("Zoom Level: "+getZoomLevel (minLat,maxLat,minLong,maxLong,mapViewOutlet.Frame.Size.Width,mapViewOutlet.Frame.Size.Height));
-			mapView.MoveCamera (CameraUpdate.ZoomToZoom((float) (getZoomLevel (minLat,maxLat,minLong,maxLong,mapViewOutlet.Frame.Size.Width,mapViewOutlet.Frame.Size.Height))));
+			addMarkerAtLocationsWithGoogleMarker (this.markersToAdd);
+			cameraAutoZoomAndReposition (this.markersToAdd);
 			View = mapView;
-
 
 		}
 		public override void ViewDidLoad ()

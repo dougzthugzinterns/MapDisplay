@@ -96,10 +96,6 @@
     <Compile Include="Screens\GoogleMapView.designer.cs">
       <DependentUpon>GoogleMapView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\GoogleMapView2.cs" />
-    <Compile Include="Screens\GoogleMapView2.designer.cs">
-      <DependentUpon>GoogleMapView2.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -115,6 +111,5 @@
   <ItemGroup>
     <InterfaceDefinition Include="Screens\HomeScreen.xib" />
     <InterfaceDefinition Include="Screens\GoogleMapView.xib" />
-    <InterfaceDefinition Include="Screens\GoogleMapView2.xib" />
   </ItemGroup>
 </Project>
