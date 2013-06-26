@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B90AD1B0000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F21B9B90000000000000000 /* UIKit.framework */; };
+		3D26504E0000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B75CEC000000000000000000 /* MapKit.framework */; };
+		1259B8E60000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15EAC5840000000000000000 /* Foundation.framework */; };
+		5C49B2F00000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955A7CD00000000000000000 /* CoreGraphics.framework */; };
+		1B4383D50000000000000000 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ED490730000000000000000 /* icon.png */; };
+		219486700000000000000000 /* HomeScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AA550500000000000000000 /* HomeScreen.xib */; };
+		102A97C30000000000000000 /* GoogleMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13BBA4610000000000000000 /* GoogleMapView.xib */; };
+		3957A0C00000000000000000 /* GoogleMapView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72686AA00000000000000000 /* GoogleMapView2.xib */; };
+		2C4D367B0000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 11A6C9680000000000000000 /* AppDelegate.h */; };
+		32FB3D400000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0C07200000000000000000 /* AppDelegate.m */; };
+		18631C6C0000000000000000 /* HomeScreen.h in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4290A0000000000000000 /* HomeScreen.h */; };
+		83CF21700000000000000000 /* HomeScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDFEB500000000000000000 /* HomeScreen.m */; };
+		2101674D0000000000000000 /* GoogleMapView.h in Sources */ = {isa = PBXBuildFile; fileRef = 249273EB0000000000000000 /* GoogleMapView.h */; };
+		2F12B6A90000000000000000 /* GoogleMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A3C3470000000000000000 /* GoogleMapView.m */; };
+		7D72BDF00000000000000000 /* GoogleMapView2.h in Sources */ = {isa = PBXBuildFile; fileRef = B68387D00000000000000000 /* GoogleMapView2.h */; };
+		209BA1150000000000000000 /* GoogleMapView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 242CADB30000000000000000 /* GoogleMapView2.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		262BD7140000000000000000 /* MapDisplayTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "MapDisplayTest.app"; path = "MapDisplayTest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F21B9B90000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		B75CEC000000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		15EAC5840000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		955A7CD00000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		1ED490730000000000000000 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon.png"; path = "icon.png"; sourceTree = "<group>"; };
+		5AA550500000000000000000 /* HomeScreen.xib */ = {isa = PBXFileReference; name = "HomeScreen.xib"; path = "Screens/HomeScreen.xib"; sourceTree = "<group>"; };
+		13BBA4610000000000000000 /* GoogleMapView.xib */ = {isa = PBXFileReference; name = "GoogleMapView.xib"; path = "Screens/GoogleMapView.xib"; sourceTree = "<group>"; };
+		72686AA00000000000000000 /* GoogleMapView2.xib */ = {isa = PBXFileReference; name = "GoogleMapView2.xib"; path = "Screens/GoogleMapView2.xib"; sourceTree = "<group>"; };
+		11A6C9680000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		6C0C07200000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		1BF4290A0000000000000000 /* HomeScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HomeScreen.h"; path = "HomeScreen.h"; sourceTree = "<group>"; };
+		BCDFEB500000000000000000 /* HomeScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "HomeScreen.m"; path = "HomeScreen.m"; sourceTree = "<group>"; };
+		249273EB0000000000000000 /* GoogleMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GoogleMapView.h"; path = "GoogleMapView.h"; sourceTree = "<group>"; };
+		32A3C3470000000000000000 /* GoogleMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GoogleMapView.m"; path = "GoogleMapView.m"; sourceTree = "<group>"; };
+		B68387D00000000000000000 /* GoogleMapView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GoogleMapView2.h"; path = "GoogleMapView2.h"; sourceTree = "<group>"; };
+		242CADB30000000000000000 /* GoogleMapView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "GoogleMapView2.m"; path = "GoogleMapView2.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		166B72F70000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B90AD1B0000000000000000 /* UIKit.framework in Frameworks */,
+				3D26504E0000000000000000 /* MapKit.framework in Frameworks */,
+				1259B8E60000000000000000 /* Foundation.framework in Frameworks */,
+				5C49B2F00000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3684E4850000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				211E98D10000000000000000 /* MapDisplayTest */,
+				1380A5F00000000000000000 /* Frameworks */,
+				2BD1BEAB0000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BD1BEAB0000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				262BD7140000000000000000 /* MapDisplayTest.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		1380A5F00000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F21B9B90000000000000000 /* UIKit.framework */,
+				B75CEC000000000000000000 /* MapKit.framework */,
+				15EAC5840000000000000000 /* Foundation.framework */,
+				955A7CD00000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		211E98D10000000000000000 /* MapDisplayTest */ = {
+			isa = PBXGroup;
+			children = (
+				11A6C9680000000000000000 /* AppDelegate.h */,
+				249273EB0000000000000000 /* GoogleMapView.h */,
+				B68387D00000000000000000 /* GoogleMapView2.h */,
+				1BF4290A0000000000000000 /* HomeScreen.h */,
+				1ED490730000000000000000 /* icon.png */,
+				1B10A0B90000000000000000 /* Screens */,
+				3A5E85D70000000000000000 /* Supporting Files */,
+			);
+			name = "MapDisplayTest";
+			sourceTree = "<group>";
+		};
+		1B10A0B90000000000000000 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				13BBA4610000000000000000 /* GoogleMapView.xib */,
+				72686AA00000000000000000 /* GoogleMapView2.xib */,
+				5AA550500000000000000000 /* HomeScreen.xib */,
+			);
+			name = "Screens";
+			sourceTree = "<group>";
+		};
+		3A5E85D70000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6C0C07200000000000000000 /* AppDelegate.m */,
+				32A3C3470000000000000000 /* GoogleMapView.m */,
+				242CADB30000000000000000 /* GoogleMapView2.m */,
+				BCDFEB500000000000000000 /* HomeScreen.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E7114840000000000000000 /* MapDisplayTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B78B13A0000000000000000 /* Build configuration list for PBXNativeTarget "MapDisplayTest" */;
+			buildPhases = (
+				49633E100000000000000000 /* Sources */,
+				166B72F70000000000000000 /* Frameworks */,
+				2D80D36C0000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MapDisplayTest";
+			productName = "MapDisplayTest";
+			productReference = 262BD7140000000000000000 /* MapDisplayTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		13BDEEAA0000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 10C58B600000000000000000 /* Build configuration list for PBXProject "MapDisplayTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3684E4850000000000000000;
+			productRefGroup = 2BD1BEAB0000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E7114840000000000000000 /* MapDisplayTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D80D36C0000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B4383D50000000000000000 /* icon.png in Resources */,
+				219486700000000000000000 /* HomeScreen.xib in Resources */,
+				102A97C30000000000000000 /* GoogleMapView.xib in Resources */,
+				3957A0C00000000000000000 /* GoogleMapView2.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49633E100000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C4D367B0000000000000000 /* AppDelegate.h in Sources */,
+				32FB3D400000000000000000 /* AppDelegate.m in Sources */,
+				18631C6C0000000000000000 /* HomeScreen.h in Sources */,
+				83CF21700000000000000000 /* HomeScreen.m in Sources */,
+				2101674D0000000000000000 /* GoogleMapView.h in Sources */,
+				2F12B6A90000000000000000 /* GoogleMapView.m in Sources */,
+				7D72BDF00000000000000000 /* GoogleMapView2.h in Sources */,
+				209BA1150000000000000000 /* GoogleMapView2.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1241BD050000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		612658600000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "MapDisplayTest";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10C58B600000000000000000 /* Build configuration list for PBXProject "MapDisplayTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1241BD050000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		1B78B13A0000000000000000 /* Build configuration list for PBXNativeTarget "MapDisplayTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				612658600000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 13BDEEAA0000000000000000 /* Project object */;
+}
